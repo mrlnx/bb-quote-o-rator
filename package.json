@@ -1,7 +1,12 @@
 {
-  "name": "bb-quote-o-rator-test",
+  "name": "bb-quote-o-rator",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mrlnx/bb-quote-o-rator.git"
+  },
+  "author": "Marlon Lede <marlonlede@gmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
