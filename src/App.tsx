@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { fetchRandomQuote, Quote as QuoteType } from "./api/QuotesService";
+import { fetchRandomQuote } from "./api/QuotesService";
+import { Quote as QuoteType } from './typings/types';
 
 function App() {
 
