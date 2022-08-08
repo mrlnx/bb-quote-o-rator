@@ -1,26 +1,29 @@
-import { useEffect, useState } from "react";
-import { fetchRandomQuote } from "./api/QuotesService";
-import { Quote as QuoteType } from './typings/types';
+import { Wrapper } from "./App.styled";
+
+import { Background } from "./components/Background";
+
+import {
+  QuoteContextProvider,
+} from "./context";
+
+import backgroundImg from "./assets/images/background.jpg";
+import backgroundFallbackImg from "./assets/images/background-fallback.jpg";
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "./theme/theme";
 
 function App() {
-
-  const [quote, setQuote] = useState<QuoteType>();
-
-  useEffect(() => {
-    let isSubscribed = true;
-
-    fetchRandomQuote()
-      .then((res) => (isSubscribed ? setQuote(res) : null))
-      .catch(console.error);
-
-    return () => {
-      isSubscribed = false;
-    };
-  }, []);
-
-  return (<div>
-    <div>{quote?.quote} by {quote?.author}</div>
-  </div>);
+  return (
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <QuoteContextProvider>
+          <Background
+            src={backgroundImg}
+            fallbackSrc={backgroundFallbackImg}
+          />
+        </QuoteContextProvider>
+      </Wrapper>
+    </ThemeProvider>
+  );
 }
 
 export default App;
