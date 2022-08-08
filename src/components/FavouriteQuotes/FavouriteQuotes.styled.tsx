@@ -5,7 +5,7 @@ import { Icon } from "../Icon";
 export const Wrapper = styled.div({
   display: "flex",
   position: "absolute",
-  bottom: "60px",
+  bottom: "20px",
   flexDirection: "column",
   justifyContent: "center",
   width: "100%",

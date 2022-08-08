@@ -13,4 +13,4 @@ export const ICON_LIST = [
   ];
 
 export const TWITTER_BASE_URL = "https://twitter.com/intent/tweet";
-export const BASE_URL = process.env.VERCEL_URL;
+export const BASE_URL = "https://bb-quote-o-rator.vercel.app";
