@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Breaking Bad Quote-O-Rator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The [Breaking Bad Quote-O-Rator is Quote generator](https://bb-quote-o-rator.vercel.app/) for fans of the serie Breaking Bad. With the generator you generate over 100 quotes of the series from your favourite characters: i.e Walter, Jessie, Gus, Saul and Skyler. [https://www.breakingbadapi.com](https://www.breakingbadapi.com) has a collection of information about all the quotes, characters and even about the spin-off Better Call Saul. The Breaking Bad Quote-O-Rator makes it even possible to save your favourite quotes on your device and to share them on twitter.
 
-## Available Scripts
+If you like to use the Breaking Bad Quote-O-Rator is Quote generator you can click [here](https://bb-quote-o-rator.vercel.app/).
 
-In the project directory, you can run:
+## Requirements for running locally
+- Node 14 or higher
 
-### `yarn start`
+### Install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+yarn
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install
+```
 
-### `yarn test`
+### Running locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+yarn start 
 
-### `yarn build`
+or
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn test 
 
-### `yarn eject`
+or
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+npm test
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Technology used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+- React 18.2
+- Typescript
+- Emotion
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The application in build with React 18, because of the simplicity no need for serverside rending etc.
+- The application theming and design is close to ambiance of the series, the colors and background are used.
+- The styling of the application makes use of Styled components or CSS-in-JS the library of choice was Emotion. 
+
+- The application is fully typed with Typescript, generics are used where possible and mostly the Typescript is used for the better to build better quality
+
+- The folder structure is focused on reusable components, all components have their own direcotry with all the files which belong to this component. [Atomic design](https://bradfrost.com/blog/post/atomic-web-design/) is also build this way, this is how design systems can be structured. Api services have their on directory, also the base theme. Hooks and context are separated when they can used by other components. This way the structure stays flat.
+
+- The components are unit-tested.
