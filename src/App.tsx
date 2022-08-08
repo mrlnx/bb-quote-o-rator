@@ -13,6 +13,7 @@ import {
 } from "./context";
 import { useState } from 'react';
 import { Quote } from './components/Quote';
+import { FavouriteQuotes } from './components/FavouriteQuotes';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
                     <QuoteWrapper>
                       <Quote />
                     </QuoteWrapper>
+                    <FavouriteQuotes />
                   </>
                 )}
               </main>
