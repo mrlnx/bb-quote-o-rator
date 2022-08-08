@@ -54,3 +54,8 @@ npm test
 - The folder structure is focused on reusable components, all components have their own direcotry with all the files which belong to this component. [Atomic design](https://bradfrost.com/blog/post/atomic-web-design/) is also build this way, this is how design systems can be structured. Api services have their on directory, also the base theme. Hooks and context are separated when they can used by other components. This way the structure stays flat.
 
 - The components are unit-tested.
+
+## Todo
+
+- End to end
+- Styling fixes
