@@ -8,6 +8,9 @@
   },
   "author": "Marlon Lede <marlonlede@gmail.com>",
   "dependencies": {
+    "@emotion/eslint-plugin": "^11.10.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/react-hooks": "^8.0.1",
