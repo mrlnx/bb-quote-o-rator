@@ -18,6 +18,7 @@ const StyledButton = styled.button<{
   textTransform: "uppercase",
   textAlign: "center",
   alignItems: "center",
+  cursor: 'pointer'
 }));
 
 type ButtonProps = {
