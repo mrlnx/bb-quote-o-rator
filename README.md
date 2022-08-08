@@ -45,11 +45,11 @@ npm test
 
 ## Documentation
 
-- The application in build with React 18, because of the simplicity no need for serverside rending etc.
-- The application theming and design is close to ambiance of the series, the colors and background are used.
-- The styling of the application makes use of Styled components or CSS-in-JS the library of choice was Emotion. 
+- The application is build with React 18, because of the simplicity no need for serverside rending etc.
+- The application theming and design are close to ambiance of the series, the colors and background are used.
+- The styling of the application makes use of Styled components or CSS-in-JS.
 
-- The application is fully typed with Typescript, generics are used where possible and mostly the Typescript is used for the better to build better quality
+- The application is fully typed with Typescript, generics are used where possible
 
 - The folder structure is focused on reusable components, all components have their own direcotry with all the files which belong to this component. [Atomic design](https://bradfrost.com/blog/post/atomic-web-design/) is also build this way, this is how design systems can be structured. Api services have their on directory, also the base theme. Hooks and context are separated when they can used by other components. This way the structure stays flat.
 
@@ -57,5 +57,5 @@ npm test
 
 ## Todo
 
-- End to end
+- End to end test
 - Styling fixes
