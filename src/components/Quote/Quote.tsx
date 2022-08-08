@@ -1,4 +1,5 @@
 import { FC, useContext } from "react";
+import { BASE_URL, TWITTER_BASE_URL } from "../../constants";
 import { FavouriteQuotesContext } from "../../context/FavouriteQuotesContext";
 import { QuoteContext } from "../../context/QuoteContext";
 import { Button } from "../Button/Button";
@@ -28,7 +29,10 @@ export const Quote: FC = () => {
   };
 
   const tweetHandler = () => {
-    console.log("tweetHandler");
+    window.open(
+      `${TWITTER_BASE_URL}?original_referer=${BASE_URL}&text=I found this Breaking Bad quote on ${BASE_URL}: ${quote?.quote} — ${quote?.author}`,
+      "_blank"
+    );
   };
 
   return (
