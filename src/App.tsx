@@ -1,15 +1,16 @@
-import { Wrapper } from "./App.styled";
+import backgroundFallbackImg from './assets/images/background-fallback.jpg';
+import backgroundImg from './assets/images/background.jpg';
+import { Background } from './components/Background';
+import { Header } from './components/Header';
+import { theme } from './theme/theme';
+import { ThemeProvider } from '@emotion/react';
+import { Wrapper } from './App.styled';
 
-import { Background } from "./components/Background";
 
 import {
   QuoteContextProvider,
 } from "./context";
 
-import backgroundImg from "./assets/images/background.jpg";
-import backgroundFallbackImg from "./assets/images/background-fallback.jpg";
-import { ThemeProvider } from "@emotion/react";
-import { theme } from "./theme/theme";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             src={backgroundImg}
             fallbackSrc={backgroundFallbackImg}
           />
+          <Header />
         </QuoteContextProvider>
       </Wrapper>
     </ThemeProvider>
