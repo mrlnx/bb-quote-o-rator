@@ -1,5 +1,5 @@
 export const LOCAL_STORAGE_KEY = "storage-breaking-bad-quotes";
-export const LOCAL_STORAGE_MAX_ITEMS = 8;
+export const LOCAL_STORAGE_MAX_ITEMS = 5;
 
 export const ICON_LIST = [
     "ai",
