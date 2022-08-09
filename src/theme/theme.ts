@@ -20,11 +20,12 @@ export const theme: Theme = {
     xxxl: 48,
   },
   typography: {
+    fontXS: "12px",
     fontS: "14px",
     fontM: "18px",
-    fontL: "22px",
-    fontXL: "26px",
-    fontXXL: "30px",
-    fontXXXL: "34px",
+    fontL: "24px",
+    fontXL: "32px",
+    fontXXL: "42px",
+    fontXXXL: "48px",
   },
 };

@@ -33,34 +33,34 @@ export const QuoteLines = styled.div(({ theme }) => ({
 
 export const QuoteLine = styled.div(({ theme }) => ({
   display: "flex",
-  fontSize: "32px",
+  fontSize: theme.typography.fontXL,
   textAlign: "center",
   justifyContent: "center",
   textShadow: `2px 2px ${theme.colors.black}`,
   "@media (min-width: 375px)": {
-    fontSize: "32px",
+    fontSize: theme.typography.fontXL,
   },
   "@media (min-width: 648px)": {
-    fontSize: "42px",
+    fontSize: theme.typography.fontXXL,
   },
   "@media (min-width: 768px)": {
-    fontSize: "48px",
+    fontSize: theme.typography.fontXXXL,
   },
 }));
 
 export const AuthorLine = styled.div(({ theme }) => ({
   display: "flex",
-  fontSize: "24px",
+  fontSize: theme.typography.fontL,
   justifyContent: "center",
-  paddingTop: "30px",
+  paddingTop: `${theme.spacings.xl}px`,
   textShadow: `1px 1px ${theme.colors.black}`,
 }));
 
-export const Buttons = styled.div({
+export const Buttons = styled.div(({ theme }) => ({
   display: "flex",
   width: "380px",
   justifyContent: "center",
-  gap: "20px",
-  paddingTop: "50px",
+  gap: `${theme.spacings.m}px`,
+  paddingTop: `${theme.spacings.xxxl}px`,
   animation: `${fadeIn} 0.5s ease-in`,
-});
+}));
