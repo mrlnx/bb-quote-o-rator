@@ -3,7 +3,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import { useStoredList } from "./useStoredList";
 
 describe("useStoredList", () => {
-  const setup = () => renderHook(() => useStoredList<number>("test-key"));
+  const setup = () => renderHook(() => useStoredList<number>("test-key", 5));
 
   it("should show items", async () => {
     const { result } = setup();
