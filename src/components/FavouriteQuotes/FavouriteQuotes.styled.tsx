@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { fadeIn } from "../../utils/style";
 import { Icon } from "../Icon";
 
-export const Wrapper = styled.ul(({ theme }) => ({
+export const Wrapper = styled.div(({ theme }) => ({
   display: "flex",
   position: "absolute",
   bottom: `${theme.spacings.m}px`,
@@ -13,8 +13,6 @@ export const Wrapper = styled.ul(({ theme }) => ({
 
 export const FavouriteQuotesList = styled.ul(({ theme }) => ({
   display: "flex",
-  margin: 0,
-  padding: 0,
   justifyContent: "center",
   alignItems: "center",
   li: {
