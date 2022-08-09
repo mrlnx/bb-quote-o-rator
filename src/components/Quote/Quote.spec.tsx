@@ -20,6 +20,7 @@ describe("Quote", () => {
             ids: [id],
             add: jest.fn(),
             remove: jest.fn(),
+            maxLimit: false
           }}
         >
           {element}

@@ -20,6 +20,7 @@ describe("FavouriteQuotes", () => {
             ids: [id],
             add: jest.fn(),
             remove: jest.fn(),
+            maxLimit: false
           }}
         >
           {element}

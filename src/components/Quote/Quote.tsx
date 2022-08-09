@@ -12,7 +12,7 @@ import {
 } from "./Quote.styled";
 
 export const Quote: FC = () => {
-  const { ids, add, remove } = useContext(FavouriteQuotesContext);
+  const { ids, add, remove, maxLimit } = useContext(FavouriteQuotesContext);
   const { quote } = useContext(QuoteContext);
 
   if (!quote) {
@@ -21,10 +21,10 @@ export const Quote: FC = () => {
 
   const quoteSaved = ids.includes(quote.quote_id);
   const storeQuoteHandler = () => {
-    if (quoteSaved) {
-      remove(quote.quote_id);
-    } else {
+    if (!quoteSaved) {
       add(quote.quote_id);
+    } else {
+      remove(quote.quote_id);
     }
   };
 
@@ -42,7 +42,7 @@ export const Quote: FC = () => {
         <AuthorLine>— {quote?.author}</AuthorLine>
       </QuoteLines>
       <Buttons>
-        <Button name="tweet-btn" onClick={() => tweetHandler()}>
+        <Button name="tweet-btn" onClick={() => tweetHandler()} disabled={maxLimit}>
           Tweet
         </Button>
         <Button name="favourite-btn" onClick={() => storeQuoteHandler()}>{`${

@@ -9,8 +9,17 @@ import {
 } from "./FavouriteQuotes.styled";
 
 export const FavouriteQuotes: FC = () => {
-  const { ids } = useContext(FavouriteQuotesContext);
-  const { getQuoteById, selected } = useContext(QuoteContext);
+  const { ids, remove } = useContext(FavouriteQuotesContext);
+  const { selected, getQuoteById } = useContext(QuoteContext);
+
+  const clickHandler = (e: React.MouseEvent<Element, MouseEvent>, id: number) => {
+    e.preventDefault();
+    if(e.detail === 1) {
+      getQuoteById(id);
+    } else {
+      remove(id);
+    }
+  }
 
   return (
     <Wrapper>
@@ -19,7 +28,7 @@ export const FavouriteQuotes: FC = () => {
           <FavouriteTitle>My favourite quotes</FavouriteTitle>
           <FavouriteQuotesList>
             {ids.map((id, index) => (
-              <li key={index} onClick={() => getQuoteById(id)}>
+              <li key={index} onClick={(e) => clickHandler(e, id)}>
                 <StyledIcon
                   selected={selected === id}
                   name={ICON_LIST[index]}

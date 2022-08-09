@@ -5,9 +5,10 @@ export interface StoredList<T> {
   items: T[];
   add: (item: T) => void;
   remove: (item: T) => void;
+  maxLimit: boolean,
 }
 
-export const useStoredList = <T>(key: string): StoredList<T> => {
+export const useStoredList = <T>(key: string, maxItems: number = 0): StoredList<T> => {
   const [items, setItems] = useState<T[]>([]);
   const [initialized, setInitialized] = useState<boolean>(false);
 
@@ -27,9 +28,9 @@ export const useStoredList = <T>(key: string): StoredList<T> => {
 
   const add = useCallback((item: T) => {
     setItems((currentItems) =>
-      currentItems ? [...currentItems, item] : currentItems
+      currentItems && (currentItems.length <= maxItems) ? [...currentItems, item] : currentItems
     );
-  }, []);
+  }, [maxItems]);
 
   const remove = useCallback((item: T) => {
     setItems((currentItems) =>
@@ -44,5 +45,6 @@ export const useStoredList = <T>(key: string): StoredList<T> => {
     add,
     remove,
     items,
+    maxLimit: maxItems >= items.length,
   };
 };
