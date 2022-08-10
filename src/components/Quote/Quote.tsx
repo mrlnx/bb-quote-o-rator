@@ -45,7 +45,7 @@ export const Quote: FC = () => {
         <Button name="tweet-btn" onClick={() => tweetHandler()} >
           Tweet
         </Button>
-        <Button name="favourite-btn" disabled={maxLimit} onClick={() => storeQuoteHandler()}>{`${
+        <Button name="favourite-btn" disabled={!maxLimit} onClick={() => storeQuoteHandler()}>{`${
           quoteSaved ? "Unmark" : "Mark"
         } as favourite`}</Button>
       </Buttons>
