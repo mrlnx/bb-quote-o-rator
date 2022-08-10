@@ -42,10 +42,10 @@ export const Quote: FC = () => {
         <AuthorLine>— {quote?.author}</AuthorLine>
       </QuoteLines>
       <Buttons>
-        <Button name="tweet-btn" onClick={() => tweetHandler()} disabled={maxLimit}>
+        <Button name="tweet-btn" onClick={() => tweetHandler()} >
           Tweet
         </Button>
-        <Button name="favourite-btn" onClick={() => storeQuoteHandler()}>{`${
+        <Button name="favourite-btn" disabled={maxLimit} onClick={() => storeQuoteHandler()}>{`${
           quoteSaved ? "Unmark" : "Mark"
         } as favourite`}</Button>
       </Buttons>
